@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.booking_txt {
+  margin-top: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900; 
+  font-size: 20px;
+  text-align: center; 
+  margin-bottom: 30px;
+}
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh; 
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+}

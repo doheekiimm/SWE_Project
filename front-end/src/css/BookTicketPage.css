@@ -1,0 +1,246 @@
+.full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.selectbox {
+  margin: 10px
+}
+
+.card-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.movieShow-selection {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.movie-show-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-show-buttons button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-show-buttons button.selected {
+  background-color: #e74c3c;
+}
+
+.seats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.seat-row {
+  display: flex;
+}
+
+.seat-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat-btn.taken {
+  background-color: #95a5a6;
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.seat-btn.selected {
+  background-color: #e74c3c;
+}
+
+
+.choose-ticket-types-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.choose-ticket-types-form h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.ticket-type-selection {
+  margin-bottom: 10px;
+}
+
+.ticket-type-selection select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.ticket-type-selection button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ticket-type-selection button:hover {
+  background-color: #c0392b;
+}
+
+.total-price {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.card-selection {
+  margin-bottom: 20px;
+}
+
+.card-selection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-selection li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-selection li:hover {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.screen {
+  box-sizing: border-box; 
+  width: 90%;
+  padding: 8px;
+  color: black; 
+  transition-duration: 200ms;
+  border-radius: 0.375rem; 
+  margin-top: 0.5rem; 
+  margin-bottom: 1.25rem;
+  text-align: center; 
+  border: 1px solid black; 
+  margin-left: auto;
+  margin-right: auto; 
+  display: block;
+}
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-list li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-list li.selected {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.card-list li:hover {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.continue {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue:hover {
+  background-color: #2980b9;
+}
+
+.continue:focus {
+  outline: none;
+}
+
+.continue:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Submit button */
+.submit {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #c0392b;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+}
+
+.submit:focus {
+  outline: none;
+}
+
+.submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.parent-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.booking-summary {
+  text-align: left;
+}

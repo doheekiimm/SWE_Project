@@ -1,0 +1,14 @@
+h1 {
+    /* -webkit-background-clip: text; */ /* maybe add later was throwing a warning*
+    color: black; /* Set text color to black */
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: .5px rgba(0, 0, 0, 0.5); /* Darker outline for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Emphasizing shadow */
+
+}
+.movies{
+    display: flex; 
+    grid-template-columns: 3fr 3fr;
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.input {
+    width: 500px; 
+    height: auto;
+    padding: 24px;
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10; 
+    position: relative; 
+    margin-bottom: 50px;
+    align-self: center;
+    align-items: center;
+  }
+
+  .confirm-button {
+    background-color: #121481;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+  }

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.li-item {
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 0.25rem;
+  font-size: 20px; 
+  font-family: serif;
+}
+
+.a-link {
+  color: #4a5568; 
+  text-decoration: none; 
+}
+
+.searchtext{
+  font-size: 25px;
+  margin-bottom: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900; 
+  font-style: italic;
+  text-align: center; 
+}
+.search {
+display: flex;
+justify-content: center;
+}
+
+.ulStyles {
+  display: flex;
+  justify-content: center; 
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.ulStyles1, .ulStyles2 {
+  /* width: 110px; */
+  width: 11%;
+  height: 25px;
+  display: flex;
+  padding: 13px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3E3232;
+  border-radius: 9px;
+  list-style-type: none;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.linkStyles {
+  text-decoration: none;
+  color: inherit;
+}
+
+.activeLinkStyle {
+  background-color: #121481;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+.modal-open {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ulStyles1 .linkStyles, .ulStyles1 .activeLinkStyle,
+.ulStyles2 .linkStyles, .ulStyles2 .activeLinkStyle {
+    font-size: 20px; 
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
+.browse {
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #FFF6E9; 
+  color: #6c757d;
+  padding: 10px 20px; 
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 60px;
+}

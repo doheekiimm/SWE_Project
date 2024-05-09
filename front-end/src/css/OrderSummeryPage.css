@@ -1,0 +1,55 @@
+.input {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    background-color: #D9D9D9;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input input {
+    font: inherit;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.15rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input input:focus {
+    outline: none;
+    border-color: #4f005f;
+  }
+
+  .ordersumm {
+    color: black;
+    background-color: rgb(92, 75, 245);
+  }
+  
+  .ordersumm :active,
+  .ordersumm :hover{
+    background-color: rgb(213, 255, 151);
+  }
+  .ordersumm2 {
+    color: black;
+    background-color: rgb(39, 221, 166);
+  }
+  
+  .ordersumm2 :active,
+  .ordersumm2 :hover{
+    background-color: rgb(255, 167, 151);
+  }
+  .ordersumm3 {
+    color: black;
+    background-color: rgb(65, 243, 243);
+  }
+  
+  .ordersumm3 :active,
+  .ordersumm3 :hover{
+    background-color: rgb(205, 226, 87);
+  }

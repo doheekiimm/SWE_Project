@@ -1,0 +1,88 @@
+.movie-details-container1 {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  justify-self: auto ;
+}
+
+.movie-details-container1 {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.movie-info-list1 {
+  display: flex;
+  flex-direction: column; 
+  text-align: left;
+}
+
+.movie-info-heading1 {
+  grid-column: 2fr;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-info-term1 {
+  display:inline;
+  font-weight: bold;
+}
+
+.movie-info-definition1 {
+  display:inline;
+  margin-left: 10px;
+}
+
+.book-tickets-button-container1 {
+  justify-self: end;
+  margin-top: 20px;
+}
+
+.poster-trailer1 {
+  display: flex;
+  flex-direction: row;
+}
+.close-button1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.poster1 {
+  max-width: 300px;
+  margin-left: 30px;
+}
+
+.modal-content1 {
+  transform: translate(0%, -100%);
+  background-color: #F8F4EC;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  justify-content: space-between; 
+  align-items: center; 
+  border: 1px solid #007BFF;
+  /* max-width: 90%; */
+  /* max-height: 90%; */
+  /* overflow: auto;
+  z-index: 1001;  */
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.closeBtn {
+  background-color: #503C3C;
+  border-radius: 8px;
+  border: none;
+  width: 20%;
+  height: 35px;
+  margin-top: 10px;
+  color: #F8F4EC;
+  font-weight: bold;
+  margin-top: 20px;
+}

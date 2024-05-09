@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.nav-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding-right: 30px;
+  margin: 0;
+  font-size: 17px;
+}
+
+.nav-items figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 8px; 
+  margin-inline-end: 20px;
+}
+
+.nav-items li {
+  display: flex;
+}
+
+.nav-items li a {
+  color: black;
+  text-decoration: none; 
+  display: block; 
+}
+
+.edit {
+  width: 40px; 
+  height: auto;
+  display: block; 
+  padding: 5px;
+}
+.login {
+  width: 40px; 
+  height: auto;
+  display: block; 
+  padding: 5px;
+}
+.register {
+  width: 45px; 
+  height: auto;
+  display: block; 
+  padding: 3px;
+}
+
+.bookticket {
+  width: 50px; 
+  height: auto;
+  display: block; 
+  padding: 1px;
+}
+.logout{
+  width:40px;
+  height:auto; 
+  display: block; 
+  padding: 3px;
+}
+
+.logout-btn {
+  border: none;          
+  background-color: transparent;
+  font-size: 18px;
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+.admin {
+  width: 45px; 
+  height: auto;
+  display: block; 
+  padding: 3px;
+}
+
+.logintxt, .orderHistory, .regitxt, .profiletxt, .admintxt, .signupConfirm  {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.history {
+  width: 45px; 
+  height: auto;
+  display: block; 
+  padding: 3px;
+}

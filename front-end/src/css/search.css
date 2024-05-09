@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.search-bar-main {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+}
+
+.searchinput {
+  padding: 0.5rem; 
+  margin: 10px;
+  width: 500px;
+  height: 16.531px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1.8px solid #222831;
+  background: #FFF;
+}
+
+/* .search-option-btn {
+  padding: 10px; 
+  width: 90px;
+  flex-shrink: 0;
+  cursor: pointer; 
+  border-radius: 10px;
+  border: 2px solid;
+  color: #FB1515;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: #FAF6F0;
+
+} */
+.search-option-btn {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #121481;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-option-btn::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #121481; 
+  transition: width 0.3s ease-in-out;
+}
+
+.active {
+  color: white;       
+  background-color: #121481;
+  border-radius: 5px;
+}
+
+.search-option-btn:hover::after {
+  width: 100%; 
+}
+
+.search-btn{
+  height: 45px;
+  width: 80px;
+  cursor: pointer; 
+  border-radius: 15px;
+  border:solid black;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  background: #FAF6F0;
+}
+
+/* .search-bar-main {
+  display: flex; 
+  justify-content: center;
+  justify-self: center;
+  width: 900px;
+  height: 70px;
+  flex-shrink: 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #FB1515;
+} */
+
+.search-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+
+}
+.search-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 450px;
+  padding: 10px;
+  height: 49px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.resulttext {
+  font-size: 28px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900; 
+  font-style: italic;
+  text-align: center; 
+}
+
+.search-bar-main {
+  width: 800px;
+}

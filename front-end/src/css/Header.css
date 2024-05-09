@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.top-menu {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    z-index: 10;
+    background-color: #FFF6E9;
+    color: black;
+    padding-top: 8px; /* py-2 equivalent */
+    padding-bottom: 8px; /* py-2 equivalent */
+    box-shadow: 0 8px 16px -1px #fff6e9;
+    display: flex;       /* Align children elements in a row */
+    align-items: center; /* Vertically center-align the child items within the container */
+    
+}
+
+.clapperboardImage {
+    width: 40px; 
+    height: auto;
+    display: block; 
+    padding: 5px;
+    margin-left: 30px;
+  }
+
+.navitem {
+    margin-left: auto;
+}
+
+.pagename, .pagename:link, .pagename:visited, .pagename:hover, .pagename:active {
+    font-size: 2.4cap;
+    font-weight: bold;
+    margin-left: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+.pagename {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
