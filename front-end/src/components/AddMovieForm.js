@@ -79,6 +79,7 @@ const AddMovieForm = () => {
             name="movie_title"
             value={movieData.movie_title}
             onChange={handleInputChange}
+            className='mt_input'
           />
         </label>
         <label>
@@ -88,6 +89,7 @@ const AddMovieForm = () => {
             name="movie_poster_url"
             value={movieData.movie_poster_url}
             onChange={handleInputChange}
+            className='poster_input'
           />
         </label>
         <label>
@@ -97,6 +99,7 @@ const AddMovieForm = () => {
             name="movie_trailer_url"
             value={movieData.movie_trailer_url}
             onChange={handleInputChange}
+            className='trail_input'
           />
         </label>
         <label>
@@ -106,6 +109,7 @@ const AddMovieForm = () => {
             name="movie_category"
             value={movieData.movie_category}
             onChange={handleInputChange}
+            className='cat_input'
           />
         </label>
         <label>
@@ -114,6 +118,7 @@ const AddMovieForm = () => {
             name="movie_rating"
             value={movieData.movie_rating}
             onChange={handleInputChange}
+            className='rating_input'
           >
             {ratings.map(rating => (
               <option key={rating._id} value={rating._id}>{rating.RatingCode}</option>
@@ -127,6 +132,7 @@ const AddMovieForm = () => {
             name="cast"
             value={movieData.cast.join(', ')}
             onChange={(e) => setMovieData({ ...movieData, cast: e.target.value.split(', ') })}
+            className='cast_input'
           />
         </label>
         <label>
@@ -136,6 +142,7 @@ const AddMovieForm = () => {
             name="director"
             value={movieData.director}
             onChange={handleInputChange}
+            className='dir_input'
           />
         </label>
         <label>
@@ -145,6 +152,7 @@ const AddMovieForm = () => {
             name="producer"
             value={movieData.producer}
             onChange={handleInputChange}
+            className='prod_input'
           />
         </label>
         <label>
@@ -154,6 +162,7 @@ const AddMovieForm = () => {
             name="synopsis"
             value={movieData.synopsis}
             onChange={handleInputChange}
+            className='syn_input'
           />
         </label>
         <label>
@@ -163,6 +172,7 @@ const AddMovieForm = () => {
             name="activeSection"
             value={movieData.activeSection}
             onChange={handleInputChange}
+            className='as_input'
           />
         </label>
         <button className="submit-button" type="submit">Add Movie</button>

@@ -1,49 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+.upper {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+  padding: 20px;
+}
+
+.desc {
+  flex-shrink: 0; /* Prevent desc from shrinking */
+  margin-left: 20px; /* Add some space between searchSec and desc */
+}
 
 .search-bar-main {
-  display: flex;
-  justify-content: center;  
-  align-items: center;     
+  /* display: flex; */
+  justify-content:left;
+  align-items: left;
+  width: 100%;
 }
 
 .searchinput {
-  padding: 0.5rem; 
-  margin: 10px;
-  width: 500px;
-  height: 16.531px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  border: 1.8px solid #222831;
-  background: #FFF;
+  /* padding: 0.5rem;  */
+  margin-right: 5px;
+  width: 396px;
+  height: 30px;
+  border: #f5e9e6;
+  background: #f5e9e6;
+  border-bottom: 1.5px solid #000;
 }
 
-/* .search-option-btn {
-  padding: 10px; 
-  width: 90px;
-  flex-shrink: 0;
-  cursor: pointer; 
-  border-radius: 10px;
-  border: 2px solid;
-  color: #FB1515;
-  text-align: center;
-  font-family: Inter;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  background: #FAF6F0;
+.searchinput:focus {
+  outline: none; 
+}
 
-} */
 .search-option-btn {
   padding: 10px;
   cursor: pointer;
   border: none;
   background: none;
-  color: #121481;
+  color: black;
   text-align: center;
   font-size: 20px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -53,14 +54,13 @@
   display: block;
   width: 0;
   height: 2px;
-  background: #121481; 
+  background: #551115; 
   transition: width 0.3s ease-in-out;
 }
 
 .active {
-  color: white;       
-  background-color: #121481;
-  border-radius: 5px;
+  color: #551115;
+  font-weight: 550;
 }
 
 .search-option-btn:hover::after {
@@ -68,46 +68,46 @@
 }
 
 .search-btn{
-  height: 45px;
-  width: 80px;
+  padding: 0px;
+  height: 40px;
+  width: 25px;
   cursor: pointer; 
-  border-radius: 15px;
-  border:solid black;
+  border: none;
   color: black;
-  text-align: center;
-  font-size: 15px;
-  font-style: normal;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
   line-height: normal;
-  background: #FAF6F0;
+  background: #f5e9e6;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 11px; 
 }
 
-/* .search-bar-main {
-  display: flex; 
-  justify-content: center;
-  justify-self: center;
-  width: 900px;
-  height: 70px;
-  flex-shrink: 0;
-  border: 2px solid black;
-  border-radius: 10px;
-  background: #FB1515;
-} */
-
 .search-container {
-  display: flex;
   flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  width: 100%;
+  padding: 15px;
+}
+.searchSec {
+  margin-left: 5px;
+  width: 600px;
+  }
+.searchtext{
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600; 
+  margin-top: 0px;
 }
 .search-options{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 450px;
-  padding: 10px;
+  width: 400px;
+  padding-top: 5px;
   height: 49px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -115,12 +115,36 @@
 
 .resulttext {
   font-size: 28px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900; 
-  font-style: italic;
-  text-align: center; 
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600; 
+  margin-top: 5px;
+  text-align: left; 
 }
 
 .search-bar-main {
-  width: 800px;
+  width: 100%;
+}
+
+.sec2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  height: 400px;
+}
+.grid1 {
+  width: 280px;
+  height: 100px;
+}
+.whymv {
+  font-size: 40px;
+  font-family: 'Pretendard', sans-serif;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+.photo1 {
+  width: 250px;
+  height: 312.5px;
+}
+.photo2 {
+  height: 200px;
+  width: 300px;
 }

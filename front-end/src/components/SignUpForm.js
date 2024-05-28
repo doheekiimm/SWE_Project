@@ -82,7 +82,8 @@ const SignUpForm = (props) => {
   return (
     <div>
       <Header />
-      <section className="regi-section">
+      <section className="regi-section" style={{ backgroundColor: '#f5e9e6' }}>
+  
         <Card className="card">
           <p className="signuptxt">Create Your Account</p>
           <form className="regiform" onSubmit={handleSignup}>

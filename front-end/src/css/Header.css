@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 .top-menu {
     width: 100%;
@@ -12,7 +12,7 @@
     padding-bottom: 8px; 
     display: flex;      
     align-items: center; 
-    padding-top: 20px;
+    padding-top: 25px;
 } 
 .top-menu::before {
     content: "";
@@ -30,29 +30,38 @@
     width: 97%; 
     border-bottom: 2.5px solid #000;
 }
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
 
+.pagename {
+    font-family: 'Pretendard';
+    margin-left: 25px;
+    font-size: 3cap;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+.the {
+    font-family: 'Pretendard';
+    margin-left: 25px;
+    font-size: 2.4cap;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
 
-.clapperboardImage {
+.film {
     width: 40px; 
     height: auto;
     display: block; 
-    padding: 5px;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-top: 40px;
   }
 
 .navitem {
     margin-left: auto;
 }
 
-.pagename, .pagename:link, .pagename:visited, .pagename:hover, .pagename:active {
-    font-size: 2.4cap;
-    font-weight: bold;
-    margin-left: 3px;
-    text-decoration: none;
-    color: black;
-}
-
-.pagename {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-}

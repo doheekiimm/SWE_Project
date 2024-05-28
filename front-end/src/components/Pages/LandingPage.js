@@ -53,13 +53,11 @@ const LandingPage = () => {
     const filteredMovies = movies.filter(movie => movie.activeSection === activeSection);
 
     return (
-        <section>
+        <section style={{ backgroundColor: '#f5e9e6' }}>
             <Header />
             <br></br>
             <div>
-                <p className='searchtext'> Search </p>
                 <div className='search'><Search movies={movies} setMovies={setMovies}/></div>
-                <p className='browse'>Browse All Movies</p>
 
                 {/* Buttons for Now Playing and Coming Soon */}
                 <ul className="ulStyles">
@@ -134,8 +132,8 @@ const LandingPage = () => {
             </div> */}
             {/* <MovieMoreInfoModal isOpen={modalOpen} onClose={closeModal} movie={selectedMovie} /> */}
 
-        <footer className="footer">
-            <p>© 2024 A6 Movie. All rights reserved.</p>
+        <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+            <p>© 2024 The Seanema Movie. All rights reserved.</p>
         </footer>
 
         </section>

@@ -67,7 +67,7 @@ const LoginForm = () => {
   return (
     <div>
       <Header />
-      <section className='login-section'>
+      <section className='login-section' style={{ backgroundColor: '#f5e9e6' }}>
         <Card className="form-container">
           <div className='login_form'>Login</div>
           <form className="form" onSubmit={handleLogin}>
@@ -121,6 +121,10 @@ const LoginForm = () => {
             </p>
           </form>
         </Card>
+
+        <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+            <p>© 2024 The Seanema Movie. All rights reserved.</p>
+        </footer>
       </section>
     </div>
   );

@@ -76,7 +76,7 @@
     margin-left: 10px; 
 }
 
-input[type="text"] {
+.mt_input, .poster_input, .trail_input, .cat_input, .rating_input, .cast_input, .dir_input, .prod_input, .syn_input, .as_input {
     width: 50%; 
     height: 25px; 
 }

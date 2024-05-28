@@ -99,7 +99,7 @@ const NavItem = () => {
       {isAdmin && (
         <figure>
           <img src={adminIcon} alt="Admin Page Icon" className="admin" />
-          <li><Link to="/adminView" className='admintxt'>Admin Page</Link></li>
+          <li><Link to="/adminView" className='admintxt'>Admin</Link></li>
         </figure>
       )}
     </ul>

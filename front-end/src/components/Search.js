@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import MovieList from './MovieList';
 import '../css/search.css';
 import DatabaseInterface from '../DBInterface';
+import arrow from '../assets/ar.png';
+import photo1 from '../assets/photo1.jpeg';
+import photo2 from '../assets/ph3.jpeg';
+
 function Search({ movies, setMovies }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchOption, setSearchOption] = useState('title'); // Default search option
@@ -54,49 +58,65 @@ function Search({ movies, setMovies }) {
 
     return (
         <div className="search-container">
-          <div className = "search-bar-main">
-           
-           <input 
-                type="text"
-                label="search"
-                placeholder="Search movies..."
-                value={searchTerm}
-                onChange={handleInputChange}
-                className='searchinput'
-            />
-            <button className='search-btn' onClick={handleSearch}>Search</button>
+            <div className='upper'>
+                <div className='searchSec'>
+                    <p className='searchtext'> Browse Movie<br /> in the Movie Sea </p>
+                        <div className = "search-bar-main">
+                            <input 
+                                type="text"
+                                label="search"
+                                placeholder="Search movies..."
+                                value={searchTerm}
+                                onChange={handleInputChange}
+                                className='searchinput'
+                            />
+                            <button className='search-btn' onClick={handleSearch}><img src={arrow} alt="Search" className='arrow' /></button>
+                        </div>
+                        <div className="search-options">
+                            <button 
+                                className={`search-option-btn ${searchOption === 'title' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('title')}
+                            >
+                                Title
+                            </button>
+                            <button 
+                                className={`search-option-btn ${searchOption === 'category' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('category')}
+                            >
+                                Category
+                            </button>
+                            <button 
+                                className={`search-option-btn ${searchOption === 'rating' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('rating')}
+                            >
+                                Rating
+                            </button>
+                            <button 
+                                className={`search-option-btn ${searchOption === 'cast' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('cast')}
+                            >
+                                Cast
+                            </button>
+                    </div>
+                </div> 
+                
+                <div className='sec2'>
+                    <div className='grid1'>
+                        <p className='whymv'>Why We Need<br></br>Movie?</p>
+                        <img src={photo1} alt="photo1" className="photo1" />
+                    </div>
+                   
+                    <div className='grid2'>
+                        <img src={photo2} alt="photo2" className="photo2" />
+                    </div>
+                </div>
             </div>
-            <div className="search-options">
-                <button 
-                    className={`search-option-btn ${searchOption === 'title' ? 'active' : ''}`}
-                    onClick={() => handleSearchOptionChange('title')}
-                >
-                    Title
-                </button>
-                <button 
-                    className={`search-option-btn ${searchOption === 'category' ? 'active' : ''}`}
-                    onClick={() => handleSearchOptionChange('category')}
-                >
-                    Category
-                </button>
-                <button 
-                    className={`search-option-btn ${searchOption === 'rating' ? 'active' : ''}`}
-                    onClick={() => handleSearchOptionChange('rating')}
-                >
-                    Rating
-                </button>
-                <button 
-                    className={`search-option-btn ${searchOption === 'cast' ? 'active' : ''}`}
-                    onClick={() => handleSearchOptionChange('cast')}
-                >
-                    Cast
-                </button>
-            </div>
-
 
             {/* Render MovieList with filtered movies */}
-            <p className='resulttext'>Search Results:</p>
-            <MovieList movies={filteredMovies} />
+            <div className='mv_result'>
+                <p className='resulttext'>Search Results</p>
+                <MovieList movies={filteredMovies} />
+            </div>
         </div>
     );
 }
