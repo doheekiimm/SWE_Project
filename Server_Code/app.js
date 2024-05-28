@@ -8,7 +8,14 @@ const cors = require('cors');
 app.use(cors({origin: true, credentials:true}));
 app.use(express.json({extend: false}));
 app.get('/', (req, res) => res.send('Server Connected'));
-const conn_str =   "mongodb+srv://ldbobo531:pQ.uQaut2-qC73r@cluster0.hbdbygq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+// const conn_str =   "mongodb+srv://ldbobo531:pQ.uQaut2-qC73r@cluster0.hbdbygq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// 원래 db에 있던 데이터 새 db로 이동. 
+// mongodump --uri="mongodb+srv://ldbobo531:pQ.uQaut2-qC73r@cluster0.hbdbygq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" --out=/Users/kimdohee/Desktop/mongoDB_BackUp
+
+// mongorestore --uri="mongodb+srv://gitfordh15:dh1234@movie.rkozdlt.mongodb.net/?retryWrites=true&w=majority&appName=movie" /Users/kimdohee/Desktop/mongoDB_BackUp
+
+const conn_str =   "mongodb+srv://gitfordh15:dh1234@movie.rkozdlt.mongodb.net/?retryWrites=true&w=majority&appName=movie";
 mongoose.set('strictQuery', false);
 mongoose.connect(conn_str)
 .then(()=> {
