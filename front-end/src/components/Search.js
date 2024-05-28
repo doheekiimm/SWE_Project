@@ -102,12 +102,18 @@ function Search({ movies, setMovies }) {
                 
                 <div className='sec2'>
                     <div className='grid1'>
-                        <p className='whymv'>Why We Need<br></br>Movie?</p>
+                        <p className='whymv'>Why We Need<br></br>Movie in Life?</p>
                         <img src={photo1} alt="photo1" className="photo1" />
                     </div>
                    
                     <div className='grid2'>
                         <img src={photo2} alt="photo2" className="photo2" />
+                        <p className='whymvexp'>Canvas of Storytelling</p>
+                        <p className='exp'>painting vivid tales of human experience with the brushstrokes of light and sound</p>
+                        <p className='whymvexp'>Spectrum of Emotions</p>
+                        <p className='exp'>capture spectrum of human emotions connect with feelings and those of others</p>
+                        <p className='whymvexp'>Travel to Fantastical Realms</p>
+                        <p className='exp'>travel to fantastical realms and distant worlds allowing exploration beyond reality</p>
                     </div>
                 </div>
             </div>
