@@ -3,7 +3,11 @@ import axios from 'axios';
 import MovieList from '../MovieList';
 import Search from '../Search';
 import Header from '../Header';
+import Movie from '../Movie';
 import '../../css/LandingPages.css';
+import Slider from "react-slick"; // Import Slider from react-slick
+import "slick-carousel/slick/slick.css"; // Import slick styles
+import "slick-carousel/slick/slick-theme.css"; 
 import MovieMoreInfoModal from '../MovieMoreInfoModal';
 import NewInfoModal from "../ModalNewInfo";
 import { Link } from "react-router-dom";
@@ -52,6 +56,33 @@ const LandingPage = () => {
     // Filter movies based on activeSection
     const filteredMovies = movies.filter(movie => movie.activeSection === activeSection);
 
+    // Slider settings
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
     return (
         <section style={{ backgroundColor: '#f5e9e6' }}>
             <Header />
@@ -94,43 +125,30 @@ const LandingPage = () => {
             </div>
             {/* Render MovieList with filtered movies */}
             <div>
-                <MovieList movies={filteredMovies} openModal={openModal} onClose={closeModal} />
-            
+                {/* <MovieList movies={filteredMovies} openModal={openModal} onClose={closeModal} /> */}
+                <Slider {...settings} className="movie-slider">
+                    {filteredMovies.map((movie) => (
+                        <div key={movie._id} className="slider-item">
+                            <Movie
+                                title={movie.movie_title}
+                                category={movie.movie_category}
+                                rating={movie.movie_rating}
+                                poster={movie.movie_poster_url}
+                                trailer={movie.movie_trailer_url}
+                                cast={movie.cast}
+                                director={movie.director}
+                                producer={movie.producer}
+                                synopsis={movie.synopsis}
+                                showDates={movie.show_dates}
+                                showTimes={movie.show_times}
+                                ticketPrice={movie.ticket_price}
+                                _id={movie._id}
+                                openModal={() => openModal(movie)} 
+                            />
+                        </div>
+                    ))}
+                </Slider>
             </div>
-
-            {/* <div className='links'>
-            <div>
-                <Link to="buyTickets">
-                        Buy Ticket Page
-                </Link>
-            </div>
-            <div>
-                <Link to="orderSummary">
-                        Order Summary Page
-                </Link>
-            </div>
-            <div>
-                <Link to="checkout">
-                        Checkout Page
-                </Link>
-            </div>
-            <div>
-                <Link to="orderConfirmation">            
-                        Order Confirmation Page      
-                </Link>
-            </div>
-            <div>
-                <Link to="editPromotions">             
-                        Manage Promotions Page               
-                </Link>
-            </div>
-            <div>
-                <Link to="addMovies">
-                       Manage Movies Page              
-                </Link>
-            </div>
-            </div> */}
-            {/* <MovieMoreInfoModal isOpen={modalOpen} onClose={closeModal} movie={selectedMovie} /> */}
 
         <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
             <p>© 2024 The Seanema Movie. All rights reserved.</p>

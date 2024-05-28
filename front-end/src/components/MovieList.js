@@ -23,6 +23,7 @@ function MovieList(props) {
             <div className="movie-list-container">
                 {props.movies.map((movie) => (
                     <div key={movie._id} className="movie-item">
+                        {/* 모달 내부 내용 */}
                         <Movie
                             title={movie.movie_title}
                             category={movie.movie_category}

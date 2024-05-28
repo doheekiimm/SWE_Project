@@ -78,7 +78,6 @@ margin-left: 20px;
     
 }
 
-
 .footer {
   background-color: #f5e9e6; 
   color: #6c757d;
@@ -89,4 +88,29 @@ margin-left: 20px;
   justify-content: center;
   align-items: center; 
   height: 60px;
+}
+
+.slick-slide {
+  padding: 0 80px; 
+  box-sizing: border-box;
+}
+.movie-slider {
+  width: 90%; 
+  margin: 0 auto; 
+}
+.movie-slider .full-movie {
+  max-width: 450px; 
+  margin: auto; 
+}
+
+@media (max-width: 1024px) {
+  .movie-slider .slider-item .full-movie {
+      max-width: 200px; 
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-slider .slider-item .full-movie {
+      max-width: 150px; 
+  }
 }

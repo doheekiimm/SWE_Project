@@ -12,6 +12,7 @@ npm install axios
 npm install jsonwebtoken
 npm i react-router-dom
 
+npm install react-slick slick-carousel (해야되나..?)
 
 
 Commands to start program:

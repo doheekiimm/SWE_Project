@@ -62,7 +62,7 @@ function Movie(props) {
     <div className={`full-movie ${modalOpen ? "modal-open" : ""}`}>
       
       <div className="title">
-        <h1 className="innerFormat_title">{props.title}</h1>
+        <p className="innerFormat_title">{props.title}</p>
       </div>
 
       <div className="genre">
