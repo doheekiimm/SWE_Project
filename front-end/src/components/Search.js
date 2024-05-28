@@ -98,6 +98,7 @@ function Search({ movies, setMovies }) {
                                 Cast
                             </button>
                     </div>
+                    <p className='resulttext'>Search Results</p>
                 </div> 
                 
                 <div className='sec2'>
@@ -120,7 +121,7 @@ function Search({ movies, setMovies }) {
 
             {/* Render MovieList with filtered movies */}
             <div className='mv_result'>
-                <p className='resulttext'>Search Results</p>
+                {/* <p className='resulttext'>Search Results</p> */}
                 <MovieList movies={filteredMovies} />
             </div>
         </div>
