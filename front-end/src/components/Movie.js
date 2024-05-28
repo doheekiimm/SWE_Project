@@ -60,64 +60,62 @@ function Movie(props) {
 
   return (
     <div className={`full-movie ${modalOpen ? "modal-open" : ""}`}>
-      
       <div className="title">
         <p className="innerFormat_title">{props.title}</p>
       </div>
-
-      <div className="genre">
-        <h2>Genre</h2>
-        <div className="innerFormat">{props.category}</div>
-      </div>
-
-      <div className="rating">
-        <h2>Rating</h2>
-        <div className="innerFormat">{ratingString}</div>
-      </div>
-
-      <div
-        className={`content-container ${isFlipped && !modalOpen ? "flipped" : ""}`}
-      >
-        <div className="Poster-Container" onClick={handleFlip}>
-          <div className="Poster">
-            <h2>Poster</h2>
-            <img
-              src={props.poster}
-              alt={props.poster}
-              className="movie-poster"
-            />
-          </div>
-          <div className="trailer">
-            <iframe
-              src={props.trailer}
-              className="trailer"
-              width="300px"
-              height="400px"
-              allowFullScreen
-            ></iframe>
-          </div>
+      <div className="movie-content">
+        <div className="left-section">
+          <div className="Poster-Container" onClick={handleFlip}>
+              <div className="Poster">
+                <img
+                  src={props.poster}
+                  alt={props.poster}
+                  className="movie-poster"
+                />
+              </div>
+              <div className="trailer">
+                <iframe
+                  src={props.trailer}
+                  className="trailer"
+                  width="300px"
+                  height="400px"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
         </div>
 
-        {/* <div className="moreInfo">
-          <button onClick={handleMoreInfoClick} className="moreInfoButton">
-            More Info
-          </button>
-        </div> */}
+        <div className="right-section">
+          <div className="genre">
+            <p className="titless">Genre</p>
+            <div className="innerFormat">{props.category}</div>
+          </div>
 
-        <button onClick={openNewModal} className="newInfoButton">
-          Movie Info
-        </button>
-        <div>
-        <Link to={`bookTickets/${props._id}`} className="buyTicketsBtn">
-                  Book Ticket
-          </Link>
+          <div className="rating">
+          <p className="titless">Rating</p>
+            <div className="innerFormat">{ratingString}</div>
+          </div>
+
+          <div
+            className={`content-container ${isFlipped && !modalOpen ? "flipped" : ""}`}
+          >
+
+            <button onClick={openNewModal} className="newInfoButton">
+              Movie Info
+            </button>
+            <div>
+              <Link to={`bookTickets/${props._id}`} className="buyTicketsBtn">
+                        Book Ticket
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
 
 
       {newModalOpen && (
         <NewInfoModal movie={props} onClose={closeNewModal} />
       )}
+    </div>
     </div>
   );
 }

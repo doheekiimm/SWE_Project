@@ -1,13 +1,58 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-.innerFormat_title {
-    font-size: 30px;
-    font-family: 'Pretendard', sans-serif;
-    color: black;
-    text-align: center;
-    font-weight: bold;
+.full-movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
+.movie-list-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+    margin-left: 20px;
+    max-width: 1200px;
+}
+
 .movies{
     display: flex; 
     grid-template-columns: 3fr 3fr;
+}
+
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 430px; 
+    aspect-ratio: 1 / 1.15; 
+    /* background-color: ; */
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+}
+.movie-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px; /* Add some padding for better spacing */
+}
+.movie-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Add space between left and right sections */
 }
