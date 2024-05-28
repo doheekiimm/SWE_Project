@@ -151,7 +151,7 @@ const LandingPage = () => {
             </div>
 
         <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
-            <p>© 2024 The Seanema Movie. All rights reserved.</p>
+            <p>© 2024 Dohee Kim. All rights reserved.</p>
         </footer>
 
         </section>
