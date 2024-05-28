@@ -5,15 +5,32 @@
     height: 70px;
     position: relative;
     z-index: 10;
-    background-color: #FFF6E9;
+    /* background-color: #FFF6E9; */
+    /* box-shadow: 0 8px 16px -1px #fff6e9; */
     color: black;
-    padding-top: 8px; /* py-2 equivalent */
-    padding-bottom: 8px; /* py-2 equivalent */
-    box-shadow: 0 8px 16px -1px #fff6e9;
-    display: flex;       /* Align children elements in a row */
-    align-items: center; /* Vertically center-align the child items within the container */
-    
+    padding-top: 8px; 
+    padding-bottom: 8px; 
+    display: flex;      
+    align-items: center; 
+    padding-top: 20px;
+} 
+.top-menu::before {
+    content: "";
+    position: absolute;
+    top: 10px; 
+    left: 1.5%;
+    width: 97%; 
+    border-top: 2.5px solid #000;
 }
+.top-menu::after {
+    content: "";
+    position: absolute;
+    bottom: -11px; 
+    left: 1.5%; 
+    width: 97%; 
+    border-bottom: 2.5px solid #000;
+}
+
 
 .clapperboardImage {
     width: 40px; 
