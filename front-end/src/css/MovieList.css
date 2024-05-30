@@ -26,9 +26,10 @@
     flex-direction: column;
     justify-content: space-between; 
     width: 430px; 
-    aspect-ratio: 1 / 1.15; 
+    aspect-ratio: 1 / 1.10; 
     /* background-color: ; */
-    border-radius: 10px;
+    border: 1.2px solid #3D3B40;
+    border-radius: 8px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     transition: transform 0.3s ease; 
@@ -38,21 +39,26 @@
     transition: transform 0.3s ease;
 }
 .left-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 200px;
+    height: auto;
+    /* background-color: brown; */
 }
+/* 포스터랑 트레일러 */
 
 .right-section {
-    flex: 1;
-    display: flex;
+    /* flex: 1; */
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 20px; /* Add some padding for better spacing */
+    justify-content: center; */
+    padding-left: 20px;
+    /* background-color: blueviolet; */
 }
+/* 나머지인듯 */
+
 .movie-content {
     display: flex;
-    width: 100%;
-    justify-content: space-between; /* Add space between left and right sections */
+    width: 90%;
+    height: 300px;
+    /* justify-content: space-between;  */
+    /* background-color: aqua; */
 }

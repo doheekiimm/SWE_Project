@@ -36,6 +36,8 @@ margin-left: 20px;
   display: flex;
   justify-content: center; 
   list-style-type: none; 
+  margin-bottom: 30px;
+  /* border-top: 2px solid black; */
 }
 
 .ulStyles1, .ulStyles2 {
@@ -78,7 +80,7 @@ margin-left: 20px;
   color: #6c757d;
   padding: 10px 20px; 
   width: 100%;
-  margin-top: 60px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -86,18 +88,37 @@ margin-left: 20px;
 }
 
 .slick-slide {
-  padding: 0 80px; 
+  padding: 0 25px; 
   box-sizing: border-box;
 }
+
+.slick-list {
+  /* background-color: white; */
+  background-color: #f5e9e6 ;
+  height: 450px;
+}
+
+.slider-item {
+  /* background-color: blue; */
+  
+  width: 380px !important;
+  height: 440px !important;
+  border: 1.5px solid #3D3B40;
+}
+/* .full-movie {
+  width: 450px;
+  background-color: yellow;
+} */
+/* 이거 movie list 에 있는 클래스.. */
 
 .movie-slider {
   width: 90%; 
   margin: 0 auto; 
 }
-.movie-slider .full-movie {
+/* .movie-slider .full-movie {
   max-width: 450px; 
   margin: auto; 
-}
+} */
 
 @media (max-width: 1024px) {
   .movie-slider .slider-item .full-movie {

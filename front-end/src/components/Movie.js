@@ -87,12 +87,12 @@ function Movie(props) {
 
         <div className="right-section">
           <div className="genre">
-            <p className="titless">Genre</p>
+            <p className="genretxt">Genre</p>
             <div className="innerFormat">{props.category}</div>
           </div>
 
           <div className="rating">
-          <p className="titless">Rating</p>
+          <p className="ratingtxt">Rating</p>
             <div className="innerFormat">{ratingString}</div>
           </div>
 
