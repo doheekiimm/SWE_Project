@@ -109,11 +109,11 @@ const LandingPage = () => {
             </ul>
 
             {/* Render MovieList with filtered movies if any */}
-            {filteredMovies.length > 0 && (
+            {/* {filteredMovies.length > 0 && (
                 <div className='mv_result'>
                     <MovieList movies={filteredMovies} />
                 </div>
-            )}
+            )} */}
 
             {/* Render Slider with active movies */}
             <div>

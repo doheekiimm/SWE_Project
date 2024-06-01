@@ -10,13 +10,13 @@ import ticket from '../assets/aa2.png';
 import p4 from '../assets/cc.jpg';
 import p5 from '../assets/dd.jpg';
 
-function Search({ movies, setMovies }) {
+function Search({ movies, setMovies, onSearchComplete }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchOption, setSearchOption] = useState('title'); // Default search option
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [allRatings, setAllRatings] = useState([]);
-    const dbInterface = new DatabaseInterface();
     const searchContainerRef = useRef(null);
+    const dbInterface = new DatabaseInterface();
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
@@ -37,14 +37,6 @@ function Search({ movies, setMovies }) {
         fetchRatings();
     }, []);
 
-    useEffect(() => {
-        if (filteredMovies.length > 0 && searchContainerRef.current) {
-            const searchContainer = searchContainerRef.current;
-            const searchHeight = searchContainer.scrollHeight;
-            searchContainer.style.minHeight = `${searchHeight}px`;
-        }
-    }, [filteredMovies]);
-
     const handleSearch = () => {
         // Filter movies based on the search term and option
         const filtered = movies.filter(movie => {
@@ -54,9 +46,9 @@ function Search({ movies, setMovies }) {
                 case 'category':
                     return movie.movie_category.toLowerCase().includes(searchTerm.toLowerCase());
                 case 'rating':
-                    const ratingId = allRatings.find((rating) => rating.RatingCode === searchTerm.toUpperCase());
+                    const ratingId = allRatings.find((rating) => rating.RatingCode === searchTerm.toUpperCase()); 
                     console.log(ratingId);
-                    return movie.movie_rating.includes(ratingId._id);
+                    return movie.movie_rating.includes(ratingId?._id);
                 case 'cast':
                     return movie.cast.some(actor => actor.toLowerCase().includes(searchTerm.toLowerCase()));
                 default:
@@ -64,51 +56,62 @@ function Search({ movies, setMovies }) {
             }
         });
 
-        // Update the filteredMovies state with filtered movies
         setFilteredMovies(filtered);
+        onSearchComplete(filtered); // Notify parent component about the search result
+
+        // Reset min-height before setting new min-height
+        if (searchContainerRef.current) {
+            searchContainerRef.current.style.minHeight = 'auto';
+        }
     };
 
+    useEffect(() => {
+        if (searchContainerRef.current && filteredMovies.length > 0) {
+            searchContainerRef.current.style.minHeight = `${searchContainerRef.current.scrollHeight}px`;
+        }
+    }, [filteredMovies]);
+
     return (
-        <div ref={searchContainerRef} className={`search-container ${filteredMovies.length > 0 ? 'results' : ''}`}>
+        <div className={`search-container ${filteredMovies.length > 0 ? 'results' : ''}`} ref={searchContainerRef}>
             <div className='upper'>
                 <div className='searchSec'>
                     <p className='searchtext'> Browse Movie<br /> in the Movie Sea </p>
-                    <div className="search-bar-main">
-                        <input 
-                            type="text"
-                            label="search"
-                            placeholder="Search movies..."
-                            value={searchTerm}
-                            onChange={handleInputChange}
-                            className='searchinput'
-                        />
-                        <button className='search-btn' onClick={handleSearch}><img src={arrow} alt="Search" className='arrow' /></button>
-                    </div>
-                    <div className="search-options">
-                        <button 
-                            className={`search-option-btn ${searchOption === 'title' ? 'active' : ''}`}
-                            onClick={() => handleSearchOptionChange('title')}
-                        >
-                            Title
-                        </button>
-                        <button 
-                            className={`search-option-btn ${searchOption === 'category' ? 'active' : ''}`}
-                            onClick={() => handleSearchOptionChange('category')}
-                        >
-                            Category
-                        </button>
-                        <button 
-                            className={`search-option-btn ${searchOption === 'rating' ? 'active' : ''}`}
-                            onClick={() => handleSearchOptionChange('rating')}
-                        >
-                            Rating
-                        </button>
-                        <button 
-                            className={`search-option-btn ${searchOption === 'cast' ? 'active' : ''}`}
-                            onClick={() => handleSearchOptionChange('cast')}
-                        >
-                            Cast
-                        </button>
+                        <div className="search-bar-main">
+                            <input 
+                                type="text"
+                                label="search"
+                                placeholder="Search movies..."
+                                value={searchTerm}
+                                onChange={handleInputChange}
+                                className='searchinput'
+                            />
+                            <button className='search-btn' onClick={handleSearch}><img src={arrow} alt="Search" className='arrow' /></button>
+                        </div>
+                        <div className="search-options">
+                            <button 
+                                className={`search-option-btn ${searchOption === 'title' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('title')}
+                            >
+                                Title
+                            </button>
+                            <button 
+                                className={`search-option-btn ${searchOption === 'category' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('category')}
+                            >
+                                Category
+                            </button>
+                            <button 
+                                className={`search-option-btn ${searchOption === 'rating' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('rating')}
+                            >
+                                Rating
+                            </button>
+                            <button 
+                                className={`search-option-btn ${searchOption === 'cast' ? 'active' : ''}`}
+                                onClick={() => handleSearchOptionChange('cast')}
+                            >
+                                Cast
+                            </button>
                     </div>
                     {/* {filteredMovies.length > 0 && <p className='resulttext'>Search Results</p>} */}
                 </div> 
@@ -127,7 +130,7 @@ function Search({ movies, setMovies }) {
                         <p className='whymvexp'>Paint Canvas of Storytelling</p>
                         <p className='exp'> painting tales of human experience<br></br> with brushstrokes of light and sound</p>
                         <p className='whymvexp'>Travel to Fantastical Realms</p>
-                        <p className='exp'> travel realms and distant worlds allow exploration beyon everyday reality</p>
+                        <p className='exp'> travel realms and distant worlds allow exploration beyond everyday reality</p>
                     </div>
                     <div className='grid3'>
                         <img src={p5} alt="photo4" className="photo4" />
