@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import MovieList from './MovieList';
 import '../css/search.css';
 import DatabaseInterface from '../DBInterface';
 import arrow from '../assets/ar.png';
 import photo1 from '../assets/photo1.jpeg';
-import photo2 from '../assets/ph3.jpeg';
+import photo2 from '../assets/bb.jpg';
+import p2 from '../assets/p2.jpeg';
+import ticket from '../assets/aa2.png';
+import p4 from '../assets/cc.jpg';
+import p5 from '../assets/dd.jpg';
 
 function Search({ movies, setMovies }) {
     const [searchTerm, setSearchTerm] = useState('');
@@ -12,6 +16,7 @@ function Search({ movies, setMovies }) {
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [allRatings, setAllRatings] = useState([]);
     const dbInterface = new DatabaseInterface();
+    const searchContainerRef = useRef(null);
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
@@ -22,16 +27,23 @@ function Search({ movies, setMovies }) {
     };
     
     useEffect(() => {
-    const fetchRatings= async ()  => {
-        dbInterface.getAllUsRatings().then((response) => {
-            console.log(response);
-            setAllRatings(response);
-        });
-    };
+        const fetchRatings = async () => {
+            dbInterface.getAllUsRatings().then((response) => {
+                console.log(response);
+                setAllRatings(response);
+            });
+        };
 
-    fetchRatings();
-
+        fetchRatings();
     }, []);
+
+    useEffect(() => {
+        if (filteredMovies.length > 0 && searchContainerRef.current) {
+            const searchContainer = searchContainerRef.current;
+            const searchHeight = searchContainer.scrollHeight;
+            searchContainer.style.minHeight = `${searchHeight}px`;
+        }
+    }, [filteredMovies]);
 
     const handleSearch = () => {
         // Filter movies based on the search term and option
@@ -42,9 +54,9 @@ function Search({ movies, setMovies }) {
                 case 'category':
                     return movie.movie_category.toLowerCase().includes(searchTerm.toLowerCase());
                 case 'rating':
-                const ratingId=  allRatings.find((rating) => rating.RatingCode === searchTerm.toUpperCase()); 
-                console.log(ratingId);
-                return movie.movie_rating.includes(ratingId._id);
+                    const ratingId = allRatings.find((rating) => rating.RatingCode === searchTerm.toUpperCase());
+                    console.log(ratingId);
+                    return movie.movie_rating.includes(ratingId._id);
                 case 'cast':
                     return movie.cast.some(actor => actor.toLowerCase().includes(searchTerm.toLowerCase()));
                 default:
@@ -57,65 +69,68 @@ function Search({ movies, setMovies }) {
     };
 
     return (
-        <div className="search-container">
+        <div ref={searchContainerRef} className={`search-container ${filteredMovies.length > 0 ? 'results' : ''}`}>
             <div className='upper'>
                 <div className='searchSec'>
                     <p className='searchtext'> Browse Movie<br /> in the Movie Sea </p>
-                        <div className = "search-bar-main">
-                            <input 
-                                type="text"
-                                label="search"
-                                placeholder="Search movies..."
-                                value={searchTerm}
-                                onChange={handleInputChange}
-                                className='searchinput'
-                            />
-                            <button className='search-btn' onClick={handleSearch}><img src={arrow} alt="Search" className='arrow' /></button>
-                        </div>
-                        <div className="search-options">
-                            <button 
-                                className={`search-option-btn ${searchOption === 'title' ? 'active' : ''}`}
-                                onClick={() => handleSearchOptionChange('title')}
-                            >
-                                Title
-                            </button>
-                            <button 
-                                className={`search-option-btn ${searchOption === 'category' ? 'active' : ''}`}
-                                onClick={() => handleSearchOptionChange('category')}
-                            >
-                                Category
-                            </button>
-                            <button 
-                                className={`search-option-btn ${searchOption === 'rating' ? 'active' : ''}`}
-                                onClick={() => handleSearchOptionChange('rating')}
-                            >
-                                Rating
-                            </button>
-                            <button 
-                                className={`search-option-btn ${searchOption === 'cast' ? 'active' : ''}`}
-                                onClick={() => handleSearchOptionChange('cast')}
-                            >
-                                Cast
-                            </button>
+                    <div className="search-bar-main">
+                        <input 
+                            type="text"
+                            label="search"
+                            placeholder="Search movies..."
+                            value={searchTerm}
+                            onChange={handleInputChange}
+                            className='searchinput'
+                        />
+                        <button className='search-btn' onClick={handleSearch}><img src={arrow} alt="Search" className='arrow' /></button>
                     </div>
-                    {/* <p className='resulttext'>Search Results</p> */}
+                    <div className="search-options">
+                        <button 
+                            className={`search-option-btn ${searchOption === 'title' ? 'active' : ''}`}
+                            onClick={() => handleSearchOptionChange('title')}
+                        >
+                            Title
+                        </button>
+                        <button 
+                            className={`search-option-btn ${searchOption === 'category' ? 'active' : ''}`}
+                            onClick={() => handleSearchOptionChange('category')}
+                        >
+                            Category
+                        </button>
+                        <button 
+                            className={`search-option-btn ${searchOption === 'rating' ? 'active' : ''}`}
+                            onClick={() => handleSearchOptionChange('rating')}
+                        >
+                            Rating
+                        </button>
+                        <button 
+                            className={`search-option-btn ${searchOption === 'cast' ? 'active' : ''}`}
+                            onClick={() => handleSearchOptionChange('cast')}
+                        >
+                            Cast
+                        </button>
+                    </div>
                     {filteredMovies.length > 0 && <p className='resulttext'>Search Results</p>}
                 </div> 
                 
                 <div className='sec2'>
                     <div className='grid1'>
-                        <p className='whymv'>Why We Need<br></br>Movie in Life?</p>
-                        <img src={photo1} alt="photo1" className="photo1" />
+                        <p className='whymv'>Why We Need Movie</p>
+                        <p className='whymvexp0'>Spectrum of Human Emotions</p>
+                        <p className='exp0'> capture the full and diverse spectrum of human emotion, connect deeply<br></br> with various and profound feelings all<br></br> empathize with those of others </p>
+                        <img src={photo2} alt="photo2" className="photo2" />
                     </div>
                    
                     <div className='grid2'>
-                        <img src={photo2} alt="photo2" className="photo2" />
-                        <p className='whymvexp'>Canvas of Storytelling</p>
-                        <p className='exp'>painting vivid tales of human experience with the brushstrokes of light and sound</p>
-                        <p className='whymvexp'>Spectrum of Emotions</p>
-                        <p className='exp'>capture spectrum of human emotions connect with feelings and those of others</p>
+                        <p className='iol'>In Our Daily Lives . . .</p>
+                        <img src={ticket} alt="photo3" className="photo3" />
+                        <p className='whymvexp'>Paint Canvas of Storytelling</p>
+                        <p className='exp'> painting tales of human experience<br></br> with brushstrokes of light and sound</p>
                         <p className='whymvexp'>Travel to Fantastical Realms</p>
-                        <p className='exp'>travel to fantastical realms and distant worlds allowing exploration beyond reality</p>
+                        <p className='exp'> travel realms and distant worlds allow exploration beyon everyday reality</p>
+                    </div>
+                    <div className='grid3'>
+                        <img src={p5} alt="photo4" className="photo4" />
                     </div>
                 </div>
             </div>

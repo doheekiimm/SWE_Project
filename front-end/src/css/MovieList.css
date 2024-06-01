@@ -6,15 +6,17 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
 .movie-list-container {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center; /* 화면 가운데 정렬 */
     gap: 20px;
-    margin-left: 20px;
-    max-width: 1200px;
+    margin: 0 auto; /* 가운데 정렬을 위한 자동 여백 */
+    max-width: 1200px; /* 필요에 따라 최대 너비 설정 */
 }
+
 
 .movies{
     display: flex; 
@@ -25,7 +27,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
-    width: 430px; 
+    /* width: 430px;  */
+    width: 32%;
     aspect-ratio: 1 / 1.10; 
     /* background-color: ; */
     border: 1.2px solid #3D3B40;

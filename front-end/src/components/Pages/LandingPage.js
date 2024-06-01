@@ -17,6 +17,7 @@ const LandingPage = () => {
     const [activeSection, setActiveSection] = useState('nowPlaying');
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedMovie, setSelectedMovie] = useState(null);
+    const [filteredMovies, setFilteredMovies] = useState([]);
 
     useEffect(() => {
         // Fetch movies from the API
@@ -54,7 +55,7 @@ const LandingPage = () => {
     };
 
     // Filter movies based on activeSection
-    const filteredMovies = movies.filter(movie => movie.activeSection === activeSection);
+    const activeMovies = movies.filter(movie => movie.activeSection === activeSection);
 
     // Slider settings
     const settings = {
@@ -88,46 +89,36 @@ const LandingPage = () => {
             <Header />
             <br></br>
             <div>
-                <div className='search'><Search movies={movies} setMovies={setMovies}/></div>
-
-                {/* Buttons for Now Playing and Coming Soon */}
-                <ul className="ulStyles">
-                    {/* <ul className="ulStyles1"> */}
-                    {/* <a href='/#' 
-                    className={activeSection === 'nowPlaying' ? "ulStyles1 activeLinkStyle" : "ulStyles1"}
-                    onClick={handleNowPlayingClick}> 
-                        Now Playing 
-                    </a> */}
-                    <li className={activeSection === 'nowPlaying' ? "ulStyles1 activeLinkStyle" : "ulStyles1"}>
-                        <a href='#'
-                        className="linkStyles"
-                        onClick={handleNowPlayingClick}>
-                        Now Playing
-                        </a>
-                    </li>
-                    {/* </ul> */}
-                    {/* <ul className="ulStyles2"> */}
-                    {/* <a href='/#' 
-                    className={activeSection === 'comingSoon' ? "ulStyles2 activeLinkStyle" : "ulStyles2"}
-                    onClick={handleComingSoonClick}>
-                        Coming Soon
-                    </a> */}
-                    {/* </ul> */}
-                    <li className={activeSection === 'comingSoon' ? "ulStyles2 activeLinkStyle" : "ulStyles2"}>
-                        <a href='#'
-                        className="linkStyles"
-                        onClick={handleComingSoonClick}>
-                        Coming Soon
-                        </a>
-                    </li>
-                </ul>
-                
+                <div className='search'>
+                    <Search movies={movies} setMovies={setMovies} onSearchComplete={setFilteredMovies} />
+                </div>
             </div>
-            {/* Render MovieList with filtered movies */}
+            
+            {/* Buttons for Now Playing and Coming Soon */}
+            <ul className="ulStyles">
+                <li className={activeSection === 'nowPlaying' ? "ulStyles1 activeLinkStyle" : "ulStyles1"}>
+                    <a href='#' className="linkStyles" onClick={handleNowPlayingClick}>
+                        Now Playing
+                    </a>
+                </li>
+                <li className={activeSection === 'comingSoon' ? "ulStyles2 activeLinkStyle" : "ulStyles2"}>
+                    <a href='#' className="linkStyles" onClick={handleComingSoonClick}>
+                        Coming Soon
+                    </a>
+                </li>
+            </ul>
+
+            {/* Render MovieList with filtered movies if any */}
+            {filteredMovies.length > 0 && (
+                <div className='mv_result'>
+                    <MovieList movies={filteredMovies} />
+                </div>
+            )}
+
+            {/* Render Slider with active movies */}
             <div>
-                {/* <MovieList movies={filteredMovies} openModal={openModal} onClose={closeModal} /> */}
                 <Slider {...settings} className="movie-slider">
-                    {filteredMovies.map((movie) => (
+                    {activeMovies.map((movie) => (
                         <div key={movie._id} className="slider-item">
                             <Movie
                                 title={movie.movie_title}
@@ -150,10 +141,9 @@ const LandingPage = () => {
                 </Slider>
             </div>
 
-        <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
-            <p>© 2024 Dohee Kim. All rights reserved.</p>
-        </footer>
-
+            <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+                <p>© 2024 Dohee Kim. All rights reserved.</p>
+            </footer>
         </section>
     );
 }

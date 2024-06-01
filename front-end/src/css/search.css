@@ -86,10 +86,12 @@
   align-items: flex-start;
   width: 100%;
   padding: 15px;
+  height: 360px;
 }
+
 .searchSec {
   margin-left: 5px;
-  width: 600px;
+  width: 450px;
   }
 .searchtext{
   font-size: 50px;
@@ -123,45 +125,93 @@
 
 .sec2 {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-columns: 1fr 1fr 1fr; 
   height: 400px;
-  gap: 15px;
+  /* gap: 15px; */
 }
 .grid1 {
+  /* width: 280px;
+  height: 100px;
+  justify-self: end; */
   width: 280px;
   height: 100px;
   justify-self: end;
 }
 .grid2 {
-  width: 355px;
+  width: 300px;
   height: 100px;
-  margin-left: 0; 
+  /* margin-left: 15px;  */
 }
 .whymv {
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: 30px;
   font-family: 'Pretendard', sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   margin-top: 0px;
 }
 .photo1 {
-  width: 280px;
-  height: 335px;
+  width: 240px;
+  height: 300px;
+}
+.photo4 {
+  width: 240px;
+  height: 350px;
 }
 .photo2 {
-  height: 195px;
-  width: 350px;
+  height: 143px;
+  width: 280px;
   margin-bottom: 10px;
+  margin-top: 3px;
+}
+.photo3 {
+  height: 120px;
+  width: 270px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  margin-left: 15px; 
+}
+.iol {
+  font-size: 30px;
+  font-family: 'Pretendard', sans-serif;
+  margin-bottom: 7px;
+  margin-top: 0px;
+  margin-left: 5px;
 }
 .whymvexp {
-  font-size: 23px;
+  font-size: 21px;
   font-family: 'Pretendard', sans-serif;
   margin: 0px;
-  text-align: end;
+  margin-left: 15px; 
+  /* text-align: end; */
 }
 .exp {
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 15.5px;
   font-family: 'Pretendard', sans-serif;
   margin-bottom: 3px;
   margin-top: 0px;
-  text-align: end;
+  word-break: break-all;
+  line-height: 1.6;
+  margin-right: 15px;
+  margin-left: 15px; 
+  /* text-align: end; */
+}
+.whymvexp0 {
+  font-size: 21px;
+  font-family: 'Pretendard', sans-serif;
+  margin: 0px;
+  /* margin-left: 15px;  */
+  /* text-align: end; */
+}
+.exp0 {
+  /* font-size: 18px; */
+  font-size: 15.5px;
+  font-family: 'Pretendard', sans-serif;
+  margin-bottom: 3px;
+  margin-top: 4px;
+  word-break: break-all;
+  line-height: 1.6;
+  margin-right: 15px;
+  /* margin-left: 15px;  */
+  /* text-align: end; */
 }
