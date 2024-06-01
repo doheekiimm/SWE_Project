@@ -8,7 +8,7 @@ const NewInfoModal = ({ movie, onClose }) => {
     <div className="movie-more-info-page1">
       <div className="modal-content1">
         
-        <div className="movie-info-header1">
+        {/* <div className="movie-info-header1">
           <div className="poster-trailer1">
             <img src={movie.poster} alt={movie.title} className="poster1" />
             <iframe
@@ -20,18 +20,18 @@ const NewInfoModal = ({ movie, onClose }) => {
               allowFullScreen
             ></iframe>
           </div>
-        </div>
+        </div> */}
         <div className="movie-details-container1">
           <dl className="movie-info-list1">
-            <div className="movie-info-heading1">Movie Details</div>
-            <div>
+            <div className="movie-info-heading1"> {movie.title} </div>
+            {/* <div>
               <dt className="movie-info-term1">Category:</dt>
               <dd className="movie-info-definition1">{movie.category}</dd>
             </div>
             <div>
               <dt className="movie-info-term1">Rating:</dt>
               <dd className="movie-info-definition1">{movie.rating}</dd>
-            </div>
+            </div> */}
             <div>
               <dt className="movie-info-term1">Cast:</dt>
               <dd className="movie-info-definition1">{movie.cast.join(', ')}</dd>

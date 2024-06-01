@@ -32,7 +32,7 @@ const MovieMoreInfoPage = ({ movie, onClose }) => {
         </div>
         <div className="movie-details-container">
           <dl className="movie-info-list">
-            <div className="movie-info-heading">Movie Details</div>
+            <div className="movie-info-heading">Movie Details</div> 
             <div>
               <dt className="movie-info-term">Category:</dt>
               <dd className="movie-info-definition">{movie.category}</dd>

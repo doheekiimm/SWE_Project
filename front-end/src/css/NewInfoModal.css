@@ -1,88 +1,80 @@
-.movie-details-container1 {
-  display: grid;
-  grid-gap: 20px;
-  padding: 20px;
-  justify-self: auto ;
+.movie-more-info-page1 {
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.movie-details-container1 {
+.modal-content1 {
+  background: white;
+  width: 800px; /* 정사각형으로 만들기 위해 동일한 너비와 높이 설정 */
+  height: 400px; /* 정사각형으로 만들기 위해 동일한 너비와 높이 설정 */
+  padding: 20px;
+  border-radius: 8px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  grid-gap: 20px;
-  padding: 20px;
-}
-
-.movie-info-list1 {
-  display: flex;
-  flex-direction: column; 
-  text-align: left;
-}
-
-.movie-info-heading1 {
-  grid-column: 2fr;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.movie-info-term1 {
-  display:inline;
-  font-weight: bold;
-}
-
-.movie-info-definition1 {
-  display:inline;
-  margin-left: 10px;
-}
-
-.book-tickets-button-container1 {
-  justify-self: end;
-  margin-top: 20px;
+  justify-content: space-between;
+  position: relative; /* 위치 조정을 위해 relative로 설정 */
+  left: -115px;
+  top: -27px
 }
 
 .poster-trailer1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.close-button1 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 
 .poster1 {
-  max-width: 300px;
-  margin-left: 30px;
+  width: 100%;
+  height: auto;
+  max-height: 180px; /* 이미지 높이 제한 */
+  margin-bottom: 10px;
 }
 
-.modal-content1 {
-  transform: translate(0%, -100%);
-  background-color: #F8F4EC;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
-  justify-content: space-between; 
-  align-items: center; 
-  border: 1px solid #007BFF;
-  /* max-width: 90%; */
-  /* max-height: 90%; */
-  /* overflow: auto;
-  z-index: 1001;  */
-  /* display: flex; */
-  /* flex-direction: column; */
+.trailer {
+  width: 100%;
+  height: 180px; /* 트레일러 높이 설정 */
+}
+
+.movie-details-container1 {
+  flex-grow: 1;
+}
+
+.movie-info-list1 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-info-heading1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.movie-info-term1 {
+  font-weight: bold;
+}
+
+.movie-info-definition1 {
+  margin-bottom: 10px;
 }
 
 .closeBtn {
-  background-color: #503C3C;
-  border-radius: 8px;
+  align-self: center;
+  background-color: #f44336;
+  color: white;
   border: none;
-  width: 20%;
-  height: 35px;
-  margin-top: 10px;
-  color: #F8F4EC;
-  font-weight: bold;
-  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.closeBtn:hover {
+  background-color: #d32f2f;
 }
