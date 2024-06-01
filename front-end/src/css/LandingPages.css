@@ -95,15 +95,16 @@ margin-left: 20px;
 .slick-list {
   /* background-color: white; */
   background-color: #f5e9e6 ;
-  height: 450px;
+  height: 480px;
 }
 
 .slider-item {
-  /* background-color: blue; */
-  
+  background-color: #f5e9e6;
   width: 380px !important;
   height: 440px !important;
   border: 1.5px solid #3D3B40;
+  box-shadow: 11px 11px 11px rgba(61, 59, 64, 0.55),  14px 14px 13px rgba(113, 98, 113, 0.4);
+  /* rgba(61, 59, 64, 0.3); */
 }
 /* .full-movie {
   width: 450px;
