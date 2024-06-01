@@ -103,7 +103,7 @@ const LandingPage = () => {
                 </li>
                 <li className={activeSection === 'comingSoon' ? "ulStyles2 activeLinkStyle" : "ulStyles2"}>
                     <a href='#' className="linkStyles" onClick={handleComingSoonClick}>
-                        Coming Soon
+                        Coming Soonnn
                     </a>
                 </li>
             </ul>
