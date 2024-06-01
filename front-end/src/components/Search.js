@@ -110,7 +110,7 @@ function Search({ movies, setMovies }) {
                             Cast
                         </button>
                     </div>
-                    {filteredMovies.length > 0 && <p className='resulttext'>Search Results</p>}
+                    {/* {filteredMovies.length > 0 && <p className='resulttext'>Search Results</p>} */}
                 </div> 
                 
                 <div className='sec2'>
