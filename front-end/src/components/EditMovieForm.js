@@ -74,12 +74,13 @@ const EditMovieForm = () => {
   return (
    <section>
    <div>
-        <br />
+        
       <div className="cover">
-        <Card className="manageMovieCard">
-          <h2 className='mm'>Edit Movie</h2>
+        <Card className="editMovieCard">
+          <p className='mmm'>Edit Movie</p>
+          
           <form onSubmit={handleSubmit}>
-            <label>
+            <label className='editmvlabel'>
               Select Movie to Edit:
               <select value={selectedMovieId} onChange={handleSelectChange}>
                 <option value="">Select a Movie</option>
@@ -90,7 +91,7 @@ const EditMovieForm = () => {
             </label>
        
             {/* Example: */}
-            <label>
+            <label className='editmvlabel'>
               Movie Title:
               <input
                 type="text"
@@ -99,7 +100,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Movie Poster URL:
               <input
                 type="text"
@@ -108,7 +109,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Movie Trailer URL:
               <input
                 type="text"
@@ -117,7 +118,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Movie Category:
               <input
                 type="text"
@@ -126,19 +127,19 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
-          Movie Rating:
-          <select
-            name="movie_rating"
-            value= {movieData.movie_rating}     
-            onChange={handleInputChange}
-          >
+            <label className='editmvlabel'>
+              Movie Rating:
+              <select
+                name="movie_rating"
+                value= {movieData.movie_rating}     
+                onChange={handleInputChange}
+              >
             {ratings.map(rating => (
               <option key={rating._id} value={rating._id}>{rating.RatingCode}</option>
             ))}
           </select>
           </label>
-            <label>
+          <label className='editmvlabel'>
               Cast:
               <input
                 type="text"
@@ -147,7 +148,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Director:
               <input
                 type="text"
@@ -156,7 +157,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Producer:
               <input
                 type="text"
@@ -165,7 +166,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Synopsis:
               <input
                 type="text"
@@ -174,7 +175,7 @@ const EditMovieForm = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label>
+            <label className='editmvlabel'>
               Active Section:
               <input
                 type="text"
@@ -184,11 +185,15 @@ const EditMovieForm = () => {
               />
             </label>
             <br />
-            <button className="submit-button" type="submit">Update Movie</button>
+            <div className='btn-con'>
+              <button className="submit-button-editmv" type="submit">Update Movie</button>
+            </div>
           </form>
         </Card>
       </div>
     </div>
+
+
     </section>
   );
 };

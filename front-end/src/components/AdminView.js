@@ -9,7 +9,7 @@ function AdminView () {
 	return (
       <div>
 			<Header/>
-			<div className= "cover">
+			<div className= "admin-cover">
 			<div className= "admincard">
 				<h2 className='adminView'>Admin View</h2>
             <Link to="/addMovies" style={{ textDecoration: 'none' }}>
@@ -31,7 +31,12 @@ function AdminView () {
 
 			</div>
         </div>  
+
+				<footer className="footer" style={{ backgroundColor: '#f5e9e6', marginTop: '0px', marginBottom: '0px'}}>
+                <p>© 2024 Dohee Kim. All rights reserved.</p>
+            </footer>
 				</div>
+				
     )	
     }
 export default AdminView

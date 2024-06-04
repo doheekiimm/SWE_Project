@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from './Header';
-import Card from './Card';
 import Button from './Button';
 import '../css/EditPromoForm.css';
 //import axios from 'axios';
@@ -48,45 +47,54 @@ const EditPromoForm = props => {
         <div>
           <Header/>
 
-          <div className='cover'>
+          <div className='promo-cover'>
           <div className="edit-promo-form">
           {/* <Card className="input"> */}
-          <h2 className='add-movie-promo'>Add Movie Promotion </h2>
+          <p className='add-movie-promo'>Add Movie Promotion </p>
           <form onSubmit ={editPromoHandler}>
-            <label>Promotion Code</label>
+            <label className='promo-txt'>Promotion Code</label>
             <input
               id="promotionCode"
               type="text"
               value = {enteredPromoCode}
               onChange = {(e)=> {setEnteredPromoCode(e.target.value)}}
+              className='promo-input'
             />
-            <label>Percentage (example: 60%)</label>
+            <label className='promo-txt'>Percentage (example: 60%)</label>
             <input
               id="percentage"
               type="text"
               value = {enteredPercentage}
               onChange = {(e)=> {setEnteredPercentage(e.target.value)}}
+              className='promo-input'
             />
-            <label>Promotion (example: .60)</label>
+            <label className='promo-txt'>Promotion (example: .60)</label>
             <input
               id="promotionNumber"
               type="text"
               value = {enteredPercentageNumber}
               onChange = {(e)=> {setEnteredPercentageNumber(e.target.value)}}
+              className='promo-input'
             />
-            <label>Promotion Enddate</label>
+            <label className='promo-txt'>Promotion Enddate</label>
             <input
               id="endDate"
               type="text"
               value = {enteredEndDate}
               onChange = {(e)=> {setEnteredEndDate(e.target.value)}}
+              className='promo-input'
             />
-            <br></br>
-            <Button type="submit" className="promo">Add Movie Promotion</Button>
+            <div className='promo-btn-con'>
+            <Button type="submit" className="promo-btn">Add Movie Promotion</Button>
+            </div>
           </form>
           {/* </Card> */}
           </div>
           </div>
+
+          <footer className="footer" style={{ backgroundColor: '#f5e9e6', marginTop: '0' }}>
+            <p>© 2024 Dohee Kim. All rights reserved.</p>
+          </footer>
         </div>
       );
     };

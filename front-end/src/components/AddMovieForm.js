@@ -5,6 +5,8 @@ import DatabaseInterface from '../DBInterface';
 import Header from './Header';
 import '../css/AddMovieForm.css'
 import EditMovieForm from './EditMovieForm';
+
+
 const AddMovieForm = () => {
   const dbInterface = new DatabaseInterface();
   const [ratings, setRatings] = useState([]); // [ { rating: 'G', description: 'General Audiences' }, ...
@@ -67,12 +69,12 @@ const AddMovieForm = () => {
 
   return (
     <div>
-			<Header/>
+			<Header className="add-movie-header" />
     <div className="cover"> 
     <div className="manageMovieCard">
-      <h2 className='mm'>Manage Movies</h2>
+      <p className='mmm'>Manage Movies</p>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className='addmv'>
           Movie Title: 
           <input
             type="text"
@@ -82,7 +84,7 @@ const AddMovieForm = () => {
             className='mt_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Movie Poster URL:
           <input
             type="text"
@@ -92,7 +94,7 @@ const AddMovieForm = () => {
             className='poster_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Movie Trailer URL:
           <input
             type="text"
@@ -102,7 +104,7 @@ const AddMovieForm = () => {
             className='trail_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Movie Category:
           <input
             type="text"
@@ -112,7 +114,7 @@ const AddMovieForm = () => {
             className='cat_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Movie Rating:
           <select
             name="movie_rating"
@@ -125,7 +127,7 @@ const AddMovieForm = () => {
             ))}
           </select>
           </label>
-        <label>
+          <label className='addmv'>
           Cast:
           <input
             type="text"
@@ -135,7 +137,7 @@ const AddMovieForm = () => {
             className='cast_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Director:
           <input
             type="text"
@@ -145,7 +147,7 @@ const AddMovieForm = () => {
             className='dir_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Producer:
           <input
             type="text"
@@ -155,7 +157,7 @@ const AddMovieForm = () => {
             className='prod_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Synopsis:
           <input
             type="text"
@@ -165,7 +167,7 @@ const AddMovieForm = () => {
             className='syn_input'
           />
         </label>
-        <label>
+        <label className='addmv'>
           Active Section:
           <input
             type="text"
@@ -175,11 +177,17 @@ const AddMovieForm = () => {
             className='as_input'
           />
         </label>
-        <button className="submit-button" type="submit">Add Movie</button>
+        <div className='btn-con'>
+          <button className="submit-button-add" type="submit">Add Movie</button>
+        </div>
       </form>
     </div>
     </div>
     <EditMovieForm />
+
+    <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+      <p>© 2024 Dohee Kim. All rights reserved.</p>
+    </footer>
   </div>
   );
 };

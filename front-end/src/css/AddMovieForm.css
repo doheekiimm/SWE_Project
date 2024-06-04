@@ -1,82 +1,89 @@
-/* .input {
-    margin: 2rem auto;
-    padding: 1rem;
-    width: 90%;
-    max-width: 40rem;
-    background-color: #D9D9D9;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .input input {
-    font: inherit;
-    display: block;
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 0.15rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .input input:focus {
-    outline: none;
-    border-color: #4f005f;
-  }
-  
-  .submit-button {
-    color: black;
-    background-color: rgb(255, 71, 47);
-  }
-  
-  .submit-button:active,
-  .submit-button:hover{
-    background-color: rgb(213, 255, 151);
-  } */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-  .cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    height: 80vh;
-    margin-top: 0; 
-    margin-right: auto;
-    
-  }
-  
-  .manageMovieCard{
-    width: 420px; 
-    height: auto;
-    padding: 24px;
-    background-color: white;
-    border-radius: 0.375rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    z-index: 10; 
-    position: relative; 
-    /* margin-bottom: 50px; */
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
 
-.mm {
-  font-size: 180%;
-  font-weight: bold;
+.add-movie-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20; /* Ensure header is above other elements */
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 100px; /* Adjust this value based on the height of your header */
+  padding-top: 60px;
+  height: 100%; /* Ensure it takes full height of the viewport */
+}
+
+.manageMovieCard {
+  width: 500px;
+  height: 5000px; 
+  padding: 24px;
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* margin-bottom: 30px;  */
+}
+
+.mmm {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 0px;
 }
 
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
- 
-  label input {
-    margin-left: 10px; 
+.addmv {
+  display: block;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
+
+/* label input {
+  margin-left: 10px;
+} */
 
 .mt_input, .poster_input, .trail_input, .cat_input, .rating_input, .cast_input, .dir_input, .prod_input, .syn_input, .as_input {
-    width: 50%; 
-    height: 25px; 
+  font-family: 'Pretendard', sans-serif;
+  width: 98%; 
+  height: 25px;
+  margin-top: 10px; 
+}
+
+.btn-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.submit-button-add {
+  font-family: 'Pretendard', sans-serif;
+  padding: 13px 20px;
+  margin-top: 20px;
+  background-color: #3D3B40;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  width: 65%;
+  justify-content: center;
+}
+
+.submit-button-add:hover {
+  background-color: #282828;
+}
+.manageMovieCard {
+ margin-top: 0px;
 }

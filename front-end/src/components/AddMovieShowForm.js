@@ -191,16 +191,16 @@ const AddMovieShowForm = props => {
       return (
         <section>
           <Header/>
-        <div className='cover'>
+        <div className='addMvShowFormCover'>
         <div className="add-movie-show-form">
         {/* <Card className="input"> */}
-          <h2 className='addMovieShow'>Add Movie Show</h2>
+          <p className='addMovieShow'>Add Movie Show</p>
           <form onSubmit ={postMovieShow}>  
-            <label>Movie</label>
+            <label className='addmvshow'>Movie</label>
             <select //className='selectbox'
             //value = {allMovies}
             onChange = {(e)=> {setEnteredMovie(e.target.value)}}
-            style = {{width: '600px', height: '40px'}}
+            style = {{width: '500px', height: '40px'}}
             >
               <option value ="">Select a Movie</option>
               {allMovies.map((movie) => (  
@@ -210,11 +210,11 @@ const AddMovieShowForm = props => {
               ))}
             </select>
 
-            <label>Auditorium</label>
+            <label className='addmvshow'>Auditorium</label>
             <select //className='selectbox'
             //value = {allAuditoriums}
             onChange = {(e)=> {setEnteredAuditorium(e.target.value)}}
-            style = {{width: '600px', height: '40PX'}}
+            style = {{width: '500px', height: '40PX'}}
             >
               <option value ="">Select a Auditorium</option>
               {allAuditoriums.map((auditorium) => ( 
@@ -224,11 +224,11 @@ const AddMovieShowForm = props => {
               ))}
             </select>
 
-            <label>Showtime</label>
+            <label className='addmvshow'>Showtime</label>
             <select //className='selectbox'
             //value = {allShowTimes}
             onChange = {(e)=>{setEnteredShowTime(e.target.value)}}
-            style = {{width: '600px', height: '40PX'}}
+            style = {{width: '500px', height: '40PX'}}
             >
               <option value ="">Select a Showtime</option>
               {allShowTimes.map((showTime) => (
@@ -243,6 +243,9 @@ const AddMovieShowForm = props => {
           </div>
           </div>
         
+          <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+                <p>© 2024 Dohee Kim. All rights reserved.</p>
+            </footer>
         </section>
       );
     };
