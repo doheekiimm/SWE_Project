@@ -70,7 +70,7 @@ const AddMovieForm = () => {
   return (
     <div>
 			<Header className="add-movie-header" />
-    <div className="cover"> 
+    <div className="add-mv-cover"> 
     <div className="manageMovieCard">
       <p className='mmm'>Manage Movies</p>
       <form onSubmit={handleSubmit}>
@@ -183,9 +183,11 @@ const AddMovieForm = () => {
       </form>
     </div>
     </div>
+
+    <br></br>
     <EditMovieForm />
 
-    <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+    <footer className="footer" style={{ backgroundColor: '#f5e9e6', marginTop: '20px' }}>
       <p>© 2024 Dohee Kim. All rights reserved.</p>
     </footer>
   </div>

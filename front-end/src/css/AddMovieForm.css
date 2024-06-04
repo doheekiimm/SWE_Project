@@ -14,19 +14,18 @@ body, html {
   z-index: 20; /* Ensure header is above other elements */
 }
 
-.cover {
+.add-mv-cover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 100px; /* Adjust this value based on the height of your header */
   padding-top: 60px;
   height: 100%; /* Ensure it takes full height of the viewport */
 }
 
 .manageMovieCard {
   width: 500px;
-  height: 5000px; 
+  height: 650px; 
   padding: 24px;
   background-color: white;
   border-radius: 0.375rem;
@@ -58,9 +57,10 @@ body, html {
 
 .mt_input, .poster_input, .trail_input, .cat_input, .rating_input, .cast_input, .dir_input, .prod_input, .syn_input, .as_input {
   font-family: 'Pretendard', sans-serif;
-  width: 98%; 
+  width: 97%; 
   height: 25px;
   margin-top: 10px; 
+  padding: 5px;
 }
 
 .btn-con {

@@ -75,7 +75,7 @@ const EditMovieForm = () => {
    <section>
    <div>
         
-      <div className="cover">
+      <div className="add-mv-cover">
         <Card className="editMovieCard">
           <p className='mmm'>Edit Movie</p>
           

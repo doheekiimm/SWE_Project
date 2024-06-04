@@ -88,7 +88,7 @@ const EditPromoForm = props => {
             <Button type="submit" className="promo-btn">Add Movie Promotion</Button>
             </div>
           </form>
-          {/* </Card> */}
+          
           </div>
           </div>
 
