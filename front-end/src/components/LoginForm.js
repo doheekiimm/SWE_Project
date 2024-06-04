@@ -92,13 +92,13 @@ const LoginForm = () => {
               />
             </div>
 
-            <div className="remember-me" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+            <div className="remember-me" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', height: '40px' }}>
               <input
                 type="checkbox"
                 id="rememberMe"
                 checked={rememberMe}
                 onChange={handleRememberMeChange}
-                style={{ marginRight: '10px' }}
+                style={{ marginRight: '10px', marginTop: '20px' }}
               />
               <label htmlFor="rememberMe" className='rememberMe'>Remember Me</label>
             </div>
@@ -114,11 +114,10 @@ const LoginForm = () => {
               </>
             )}
 
-            <p className='linktoregi'>
-              Sign Up
-              <br />
+            <div className='linktoregi'>
+              <p className='yet'>Don't have an account yet?</p>
               <Link to='/register' className='regi'>Create an Account</Link>
-            </p>
+            </div>
           </form>
         </Card>
 

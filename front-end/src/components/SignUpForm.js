@@ -20,7 +20,6 @@ const SignUpForm = (props) => {
     lastName: '',
     password: '',
     phone: '',
-    address: '',
     status: '',
     userType: '',
     promotionSubscription: false,
@@ -64,7 +63,6 @@ const SignUpForm = (props) => {
         lastName: '',
         password: '',
         phone: '',
-        address: '',
         status: '',
         userType: '',
         promotionSubscription: '',
@@ -138,23 +136,15 @@ const SignUpForm = (props) => {
               value={user.phone}
               onChange={handleChange}
             />
-            {/* Address */}
-            <label htmlFor="address" className='labelAdress'>Address</label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              className="reginput"
-              value={user.address}
-              onChange={handleChange}
-            />
+
+        <div className="promoSub" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', height: '40px' }}>
             {/* Promotion Subscription */}
             <label htmlFor="promotionSubscription" className='labelPromo'>Promotion Subscription</label>
             <input
               type="checkbox"
               id="promotionSubscription"
               name="promotionSubscription"
-              className="reginput"
+              className="promoCheckbox"
               checked={user.promotionSubscription}
               onChange={(e) =>
                 setUser((prevUser) => ({
@@ -163,21 +153,27 @@ const SignUpForm = (props) => {
                 }))
               }
             />
+          </div>
             {/* Submit Button */}
             
             <Button type="submit" className="signup">
               Sign Up
             </Button>
             {/* Login Link */}
-            <p className="gotoLogin">
-              Already have an account? <br />
+            <div className="gotoLogin">
+              <p className='already'>Already have an account?</p>
               <a href="/login" className="linkforlogin">
                 Login
               </a>
-            </p>
+            </div>
           </form>
         </Card>
+            
       </section>
+      
+        <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+            <p>© 2024 Dohee Kim. All rights reserved.</p>
+        </footer>
     </div>
   );
 };

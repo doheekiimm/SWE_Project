@@ -51,9 +51,11 @@
   padding: 0;
 }
 
-.movie-info-heading1 {
-  font-size: 1.5em;
+.movie-info-title {
+  font-size: 35px;
   margin-bottom: 10px;
+  color: black;
+  text-align: center;
 }
 
 .movie-info-term1 {
@@ -66,15 +68,16 @@
 
 .closeBtn {
   align-self: center;
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: white;
+  color: #3D3B40;
+  border: 1.5px solid #3D3B40;
+  padding: 8px 18px;
+  margin-top: 10px;
   cursor: pointer;
   font-size: 1em;
 }
 
 .closeBtn:hover {
-  background-color: #d32f2f;
+  background-color: #3D3B40;
+  color: white;
 }

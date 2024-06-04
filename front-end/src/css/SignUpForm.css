@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 .regi-section {
   display: flex;
@@ -12,29 +13,28 @@
 
 .signuptxt {
   font-size: 190%;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 30px;
   margin-top: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 .card {
   width: 500px; 
-  height: auto;
+  height: 680px;
   padding: 24px;
-  margin-top: 70px;
+  margin-top: 100px;
   background-color: white;
   border-radius: 0.375rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   z-index: 10; 
   position: relative; 
-  margin-bottom: 50px;
 }
 
 .regiform .reginput {
   width: 100%;
-  padding: 5px 1px;
+  padding: 7px 1px;
   background-color: white;
   border-radius: 0.375rem;
   height: auto;
@@ -56,11 +56,11 @@
     margin-top: 10px;
   } */
   
-  .labelEmail, .labelFirstName, .labelLast, .labelPassword, .labelPhone, .labelAdress, .labelUsertype, .labelPromo {
-    font-size: 15px;
+  .labelEmail, .labelFirstName, .labelLast, .labelPassword, .labelPhone, .labelAdress, .labelUsertype {
+    font-size: 16px;
     font-weight: 500;
     color: #4a5568; 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     font-weight: bold;
   }
   
@@ -70,10 +70,10 @@
   }
   
   .signup {
-    width: 85%;
+    width: 75%;
     height: 45px;
     padding: 0.5rem 1rem;
-    background-color: black;
+    background-color: #524C42;
     color: white;
     border-radius: 0.375rem;
     transition: background-color 200ms;
@@ -85,7 +85,7 @@
   
   .signup:hover,
   .signup:active {
-    background-color: #ffdb6e;
+   background-color: black;
   }
 
   .gotoLogin {
@@ -96,9 +96,22 @@
     color: #4a5568;
     margin-top: 20px;
   }
-
+  .already{
+    margin-bottom: 6px;
+  }
   .linkforlogin{
     font-size: 0.9rem; 
     text-align: center;
-    font-weight: 500; 
+    font-weight: bold; 
   }
+.promoCheckbox {
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.labelPromo {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4a5568; 
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+}

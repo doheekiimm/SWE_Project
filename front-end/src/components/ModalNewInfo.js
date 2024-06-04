@@ -23,7 +23,7 @@ const NewInfoModal = ({ movie, onClose }) => {
         </div> */}
         <div className="movie-details-container1">
           <dl className="movie-info-list1">
-            <div className="movie-info-heading1"> {movie.title} </div>
+            <div className="movie-info-title"> {movie.title} </div>
             {/* <div>
               <dt className="movie-info-term1">Category:</dt>
               <dd className="movie-info-definition1">{movie.category}</dd>
@@ -33,19 +33,19 @@ const NewInfoModal = ({ movie, onClose }) => {
               <dd className="movie-info-definition1">{movie.rating}</dd>
             </div> */}
             <div>
-              <dt className="movie-info-term1">Cast:</dt>
+              <dt className="movie-info-term1">Cast</dt>
               <dd className="movie-info-definition1">{movie.cast.join(', ')}</dd>
             </div>
             <div>
-              <dt className="movie-info-term1">Director:</dt>
+              <dt className="movie-info-term1">Director</dt>
               <dd className="movie-info-definition1">{movie.director}</dd>
             </div>
             <div>
-              <dt className="movie-info-term1">Producer:</dt>
+              <dt className="movie-info-term1">Producer</dt>
               <dd className="movie-info-definition1">{movie.producer}</dd>
             </div>
             <div>
-              <dt className="movie-info-term1">Synopsis:</dt>
+              <dt className="movie-info-term1">Synopsis</dt>
               <dd className="movie-info-definition1">{movie.synopsis}</dd>
             </div>
             {/* Add more fields here as needed */}
