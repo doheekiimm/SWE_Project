@@ -243,7 +243,7 @@ const AddMovieShowForm = props => {
           </div>
           </div>
         
-          <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+          <footer className="footer" style={{ backgroundColor: '#f5e9e6', marginTop: '0' }}>
                 <p>© 2024 Dohee Kim. All rights reserved.</p>
             </footer>
         </section>

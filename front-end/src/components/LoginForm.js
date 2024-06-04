@@ -92,13 +92,13 @@ const LoginForm = () => {
               />
             </div>
 
-            <div className="remember-me" style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', height: '40px' }}>
+            <div className="remember-me" style={{ display: 'flex', alignItems: 'center', height: '40px' }}>
               <input
                 type="checkbox"
                 id="rememberMe"
                 checked={rememberMe}
                 onChange={handleRememberMeChange}
-                style={{ marginRight: '10px', marginTop: '20px' }}
+                style={{ marginRight: '10px' }}
               />
               <label htmlFor="rememberMe" className='rememberMe'>Remember Me</label>
             </div>

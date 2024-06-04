@@ -19,7 +19,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   z-index: 10; 
   position: relative; 
-  /* margin-bottom: 50px; */
 }
 
 .adminView {
@@ -38,7 +37,7 @@
   width: 90%;
   height: 45px;
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: white;;
   color: black;
   font-family: 'Pretendard', sans-serif;
   border: 1px solid black; 

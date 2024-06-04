@@ -145,93 +145,105 @@ const EditProfileForm = () => {
   return (
     <div>
       <Header />
+      
       <section className='editprofile'>
-        <Card className="inputforeidtprofile">
+        <Card className="edit-profile-card">
           <p className='editprofiletitle'>Edit Profile</p>
           <form onSubmit={addUserHandler}>
-            <label>Email Address</label>
+
+            <label className='edit-profile-label'>Email Address</label>
             <p className='editprofiletitle'>{enteredEmailAddress}</p>
-            <label>First Name</label>
+
+            <label className='edit-profile-label'>First Name</label>
             <input
               type="text"
-              className="reginput"
+              className="edit-profile-input"
               value={enteredFirstname}
               onChange={(e) => { setEnteredFirstname(e.target.value) }}
             />
-            <label>Last Name</label>
+
+            <label className='edit-profile-label'>Last Name</label>
             <input
               id="lastname"
               type="text"
-              className="reginput"
+              className="edit-profile-input"
               value={enteredLastname}
               onChange={(e) => { setEnteredLastname(e.target.value) }}
             />
-             <label>Enter Your Current Password</label>
+
+            <label className='edit-profile-label'>Enter Your Current Password</label>
             <input
               id="password"
               type="password" // Change type to password
-              className="reginput"
+              className="edit-profile-input"
               value={enteredPassword}
               onChange={(e) => { setEnteredPassword(e.target.value) }}
             />
-            <label>Enter Your New Password</label> {/* Moved this label here */}
+
+            <label className='edit-profile-label'>Enter Your New Password</label> {/* Moved this label here */}
             <input
               id="newPassword"
               type="password" // Change type to password
-              className="reginput"
+              className="edit-profile-input"
               value={newPassword}
               onChange={(e) => { setNewPassword(e.target.value) }}
             />
-            <label>Address</label>
+
+            {/* <label className='edit-profile-label'>Address</label>
             <input
               id="address"
               type="text"
               className="reginput"
               value={enteredAddress}
               onChange={(e) => { setEnteredAddress(e.target.value) }}
-            />
-            <label>Phone Number</label>
+            /> */}
+
+            <label className='edit-profile-label'>Phone Number</label>
             <input
               id="phoneNumber"
               type="text"
-              className="reginput"
+              className="edit-profile-input"
               value={enteredPhoneNumber}
               onChange={(e) => { setEnteredPhoneNumber(e.target.value) }}
             />
-            <br></br>
-            <Button type="submit" className="profilebutton">Confirm Changes</Button>
+
+            <div className='btn-con-editprofile'>
+              <Button type="submit" className="profilebutton">Confirm Changes</Button>
+            </div>
           </form>
         </Card>
       </section>
 
+{/* edit profile 끝. 그 밑에 form 들 */}
+
       <div>
         <section className='editprofile'>
-          <Card className="inputforeidtprofile">
+          <Card className="edit-profile-card">
             <p className='editcreditcard'>Add New Credit Card</p>
             <form onSubmit={addCardHandler}>
-              <label>Card Number</label>
+            <label className='edit-profile-label'>Card Number</label>
               <input
                 id="cardnumber"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={enteredCardnum}
                 onChange={(e) => { setEnteredCardnum(e.target.value) }}
               />
 
-              <label>Name on Card</label>
+              <label className='edit-profile-label'>Name on Card</label>
               <input
                 id="nameoncard"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={enteredBillingName}
                 onChange={(e) => { setEnteredBillingName(e.target.value) }}
               />
 
-              <label>Billing Address</label>
+              <label className='edit-profile-label'>Billing Address</label>
               <input
                 id="billingaddress"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={enteredBillingAddress}
                 onChange={(e) => { setEnteredBillingAddress(e.target.value) }}
               />
@@ -266,17 +278,18 @@ const EditProfileForm = () => {
                 })}
               </select>
 
-              <label>cvv</label>
+              <label className='edit-profile-label'>cvv</label>
               <input
                 id="cvv"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={enteredCvv}
                 onChange={(e) => { setEnteredCvv(e.target.value) }}
               />
 
-              <br></br>
-              <Button type="submit" className="profilebutton">Add Card</Button>
+              <div className='btn-con-editprofile'>
+                <Button type="submit" className="profilebutton">Confirm Changes</Button>
+              </div>
             </form>
           </Card>
         </section>
@@ -284,64 +297,69 @@ const EditProfileForm = () => {
 
       {userCards.map((card, index) => (
         <section className='editprofile' key={card._id}>
-          <Card className="inputforeidtprofile">
+          <Card className="edit-profile-card">
             <p className='editcreditcard'>Edit Current Cards</p>
             <form onSubmit={(e) => {
               e.preventDefault();
               editCardHandler(card._id, userCards[index]);
             }}>
-              <label>Name on Card</label>
+              <label className='edit-profile-label'>Name on Card</label>
               <input
                 id="nameoncard"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={card.name}
                 onChange={(e) => { changeCardData(index, 'name', e.target.value) }}
               />
 
-              <label>Billing Address</label>
+              <label className='edit-profile-label'>Billing Address</label>
               <input
                 id="billingaddress"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={card.address}
                 onChange={(e) => { changeCardData(index, 'address', e.target.value) }}
               />
 
-              <label>Card Number</label>
+              <label className='edit-profile-label'>Card Number</label>
               <input
                 id="cardnumber"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={card.cardNumber}
                 onChange={(e) => { changeCardData(index, 'cardNumber', e.target.value) }}
               />
 
-              <label>Expiration Date</label>
+              <label className='edit-profile-label'>Expiration Date</label>
               <input
                 id="expirationDate"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={card.expirationDate}
                 onChange={(e) => { changeCardData(index, 'expirationDate', e.target.value) }}
               />
 
-              <label>CVV</label>
+              <label className='edit-profile-label'>CVV</label>
               <input
                 id="cvv"
                 type="text"
-                className="reginput"
+                className="edit-profile-input"
                 value={card.cvv}
                 onChange={(e) => { changeCardData(index, 'cvv', e.target.value) }}
               />
 
-              <br></br>
-              <Button type="submit" className="profilebutton">Submit Changes</Button>
+            <div className='btn-con-editprofile'>
+              <Button type="submit" className="profilebutton">submit Changes</Button> <br></br>
               <Button onClick={() => deleteCardHandler(card._id)} className="profilebutton">Delete Card</Button>
+            </div>
             </form>
           </Card>
         </section>
       ))}
+
+      <footer className="footer" style={{ backgroundColor: '#f5e9e6' }}>
+          <p>© 2024 Dohee Kim. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
